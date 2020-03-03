@@ -2,16 +2,7 @@ from ubuntu:rolling
 
 RUN apt update && apt upgrade -y;
 
-RUN apt install -y
-	openjdk-8-jdk && \
-	ant && \
-	ca-certificates-java && \
-	man-db && \
-	manpages && \
-	git && \
-	apt && \
-	clean && \
-	update-ca-certificates -f;
+RUN apt install -y openjdk-8-jdk ant ca-certificates-java man-db manpages git;
 
 RUN ln -sf /bin/bash /bin/sh
 
